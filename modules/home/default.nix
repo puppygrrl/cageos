@@ -30,7 +30,6 @@ in {
     ./wezterm.nix
     ./wlogout
     ./xdg.nix
-    ./yazi
     ./zoxide.nix
     ./zsh
   ];

@@ -14,6 +14,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    file
     obsidian
     jellyfin
     jellyfin-web
