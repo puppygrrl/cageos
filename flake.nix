@@ -18,16 +18,6 @@
     profile = "nvidia";
   in {
     nixosConfigurations = {
-      amd = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [./profiles/amd];
-      };
       nvidia = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
@@ -37,16 +27,6 @@
           inherit profile;
         };
         modules = [./profiles/nvidia];
-      };
-      vm = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [./profiles/vm];
       };
     };
   };
