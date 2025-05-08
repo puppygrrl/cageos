@@ -26,9 +26,10 @@
         "break"
         {
           type = "os";
-          key = "OS - ZaneyOS v2.3";
+          key = "OS - CageOS v2.3";
           keyColor = "31";
         }
+        "break"
         {
           type = "kernel";
           key = " ├  ";
@@ -43,37 +44,6 @@
           type = "shell";
           key = " └  ";
           keyColor = "31";
-        }
-        "break"
-        {
-          type = "wm";
-          key = "WM   ";
-          keyColor = "32";
-        }
-        {
-          type = "wmtheme";
-          key = " ├ 󰉼 ";
-          keyColor = "32";
-        }
-        {
-          type = "icons";
-          key = " ├ 󰀻 ";
-          keyColor = "32";
-        }
-        {
-          type = "cursor";
-          key = " ├  ";
-          keyColor = "32";
-        }
-        {
-          type = "terminal";
-          key = " ├  ";
-          keyColor = "32";
-        }
-        {
-          type = "terminalfont";
-          key = " └  ";
-          keyColor = "32";
         }
         "break"
         {
@@ -105,24 +75,8 @@
           keyColor = "33";
         }
         {
-          type = "monitor";
-          key = " ├  ";
-          keyColor = "33";
-        }
-        {
-          type = "player";
-          key = " ├ 󰥠 ";
-          keyColor = "33";
-        }
-        {
-          type = "media";
-          key = " └ 󰝚 ";
-          keyColor = "33";
-        }
-        "break"
-        {
           type = "uptime";
-          key = "   Uptime   ";
+          key = " ├ Uptime ";
         }
       ];
     };
