@@ -2,6 +2,7 @@
   # Services to start
 
   services = {
+    tailscale.enable = true;
     libinput.enable = true; # Input Handling
     fstrim.enable = true; # SSD Optimizer
     gvfs.enable = true; # For Mounting USB & More
@@ -9,7 +10,6 @@
     blueman.enable = true; # Bluetooth Support
     tumbler.enable = true; # Image/video preview
     gnome.gnome-keyring.enable = true;
-    tailscale.enable = true;
     flatpak.enable = true;
 
     udev.extraRules = ''
@@ -17,12 +17,25 @@
       SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="0337", MODE="0666"
       SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="102b", MODE="0666"
     '';
+    dnsmasq = {
+      enable = true;
+      settings = {
+        bind-interfaces = true;
+        listen-address = ["0.0.0.0"];
+        server = [
+          "1.1.1.1"
+          "9.9.9.9"
+        ];
+        addn-hosts = ["/etc/stevenblack/hosts"];
+      };
+    };
 
     transmission = {
       enable = true; #Enable transmission daemon
       openFirewall = true;
       settings = {
-        rpc-bind-address = "0.0.0.0"; #Bind to own IP
+        bind-address-ipv4 = "100.111.61.107";
+        rpc-bind-address = "100.111.61.107";
         download-dir = "/data/torrents";
       };
     };

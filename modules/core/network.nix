@@ -14,6 +14,7 @@
       checkReversePath = "loose";
       allowedTCPPorts = [
         22
+        53
         80
         443
         59010
@@ -21,6 +22,7 @@
         8080
       ];
       allowedUDPPorts = [
+        53
         41641
         59010
         59011
