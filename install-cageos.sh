@@ -39,8 +39,6 @@ read -rp "Enter Your Hardware Profile (GPU)
 Options:
 [ amd ]
 nvidia
-nvidia-laptop
-intel
 vm
 Please type out your choice: " profile
 if [ -z "$profile" ]; then
@@ -50,28 +48,28 @@ fi
 echo "-----"
 
 backupname=$(date "+%Y-%m-%d-%H-%M-%S")
-if [ -d "zaneyos" ]; then
-  echo "ZaneyOS exists, backing up to .config/zaneyos-backups folder."
-  if [ -d ".config/zaneyos-backups" ]; then
-    echo "Moving current version of ZaneyOS to backups folder."
-    mv "$HOME"/zaneyos .config/zaneyos-backups/"$backupname"
+if [ -d "cageos" ]; then
+  echo "CageOS exists, backing up to .config/cageos-backups folder."
+  if [ -d ".config/cageos-backups" ]; then
+    echo "Moving current version of cageos to backups folder."
+    mv "$HOME"/cageos .config/cageos-backups/"$backupname"
     sleep 1
   else
-    echo "Creating the backups folder & moving ZaneyOS to it."
-    mkdir -p .config/zaneyos-backups
-    mv "$HOME"/zaneyos .config/zaneyos-backups/"$backupname"
+    echo "Creating the backups folder & moving CageOS to it."
+    mkdir -p .config/cageos-backups
+    mv "$HOME"/cageos .config/cageos-backups/"$backupname"
     sleep 1
   fi
 else
-  echo "Thank you for choosing ZaneyOS."
+  echo "Thank you for choosing CageOS."
   echo "I hope you find your time here enjoyable!"
 fi
 
 echo "-----"
 
-echo "Cloning & Entering ZaneyOS Repository"
-git clone https://gitlab.com/zaney/zaneyos.git
-cd zaneyos || exit
+echo "Cloning & Entering CageOS Repository"
+git clone https://github.com/puppygrrl/cageos.git
+cd cageos || exit
 mkdir hosts/"$hostName"
 cp hosts/default/*.nix hosts/"$hostName"
 installusername=$(echo $USER)
@@ -116,4 +114,4 @@ NIX_CONFIG="experimental-features = nix-command flakes"
 
 echo "-----"
 
-sudo nixos-rebuild switch --flake ~/zaneyos/#${profile}
+sudo nixos-rebuild switch --flake ~/cageos/#${profile}
