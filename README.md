@@ -1,6 +1,4 @@
-# CageOS
-
-Based off of: https://gitlab.com/Zaney/zaneyos
+![logo](logo.png)
 
 ## Key Features
 
