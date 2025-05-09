@@ -3,8 +3,6 @@
 in {
   imports = [
     ./amfora.nix
-    ./bash.nix
-    ./bashrc-personal.nix
     ./bat.nix
     ./btop.nix
     ./cava.nix

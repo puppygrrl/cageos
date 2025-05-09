@@ -16,7 +16,6 @@
     ./starfish.nix
     ./steam.nix
     ./stylix.nix
-    ./syncthing.nix
     ./system.nix
     ./user.nix
     ./virtualisation.nix

@@ -35,7 +35,7 @@
       openFirewall = true;
       settings = {
         bind-address-ipv4 = "100.111.61.107";
-        rpc-bind-address = "100.111.61.107";
+        rpc-bind-address = "0.0.0.0";
         download-dir = "/data/torrents";
       };
     };
