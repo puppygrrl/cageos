@@ -1,6 +1,8 @@
-![logo](logo.png)
+# CageOS
+
+This is my personal NixOS config.
 
 ## Key Features
 
-- Hyprland with Nvidia driver support
+- Hyprland with NVIDIA GPU support
 - Media suite: (Sonarr, Radarr, Jellyfin)
