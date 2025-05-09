@@ -11,7 +11,7 @@ in {
     userEmail = "${gitEmail}";
     signing = {
       format = "ssh";
-      key = "/home/${username}/.ssh/id_ed25519";
+      key = "/home/${username}/.ssh/id_ed25519.pub";
     };
   };
 }
