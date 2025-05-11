@@ -14,6 +14,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    id3v2
+    yt-dlp
     file
     obsidian
     jellyfin
